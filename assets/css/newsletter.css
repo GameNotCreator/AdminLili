@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+#editor {
+    padding: 10px;
+    min-height: 200px;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 20px;
+}

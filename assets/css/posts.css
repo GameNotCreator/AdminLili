@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+section.posts{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+section.posts .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.posts.active .profile{
+    display: none;
+}
+
+.button-post{
+    display: flex;
+    align-items: center;
+    background: #4070f4;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.button-post:hover{
+    background: #275df1;
+}
+.button-post i{
+    font-size: 18px;
+    margin-right: 5px;
+    color: #fff;
+}
+.button-post button{
+    background: none;
+    display: inline-block;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* pop up box styling */
+section.posts .posts-popup-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    transform: scale(1.2);
+    transition: opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+section.posts.active .posts-popup-outer{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+section.posts .posts-popup-box{
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 380px;
+    width: 100%;
+}
+.posts-popup-box .posts-close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: #b4b4b4;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.posts-popup-box .posts-close:hover{
+    color: #333;
+}
+.posts-popup-box .posts-profile-text{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.posts-popup-box .posts-profile-text .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.posts-profile-text .text .posts-name{
+    font-size: 14px;
+    font-weight: 400;
+}
+.posts-profile-text .text .posts-profession{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -4px;
+}
+.posts-popup-box input[type="text"],
+.posts-popup-box textarea{
+    min-height: 40px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 10px 10px 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+    margin-bottom: 10px;
+}
+.posts-popup-box .posts-button{
+    display: flex;
+    justify-content: flex-end;
+}
+.posts-popup-box .posts-button button{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    background: #6f93f6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.posts-button button.posts-cancel{
+    background: #f082ac;
+}
+.posts-button button.posts-cancel:hover{
+    background: #ec5f95;
+}
+.posts-button button.posts-send:hover{
+    background: #275df1;
+}
+
+.home-content i.bx-menu {
+  pointer-events: auto;
+}

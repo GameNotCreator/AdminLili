@@ -1,0 +1,214 @@
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <title> Lili Land Admin | Galeries </title>
+   <link rel="stylesheet" href="./assets/css/dashboard.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Boxiocns CDN Link -->
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar close">
+   <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Lili Land</span>
+   </div>
+   <ul class="nav-links">
+      <li>
+         <div class="iocn-link">
+            <a href="./home.html">
+               <i class='bx bx-grid-alt' ></i>
+               <span class="link_name">Dashboard</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Dashboard</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="./newsletter.html">
+               <i class='bx bx-envelope' ></i>
+               <span class="link_name">Newsletter</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Newsletter</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="posts.html">
+               <i class='bx bx-book-alt' ></i>
+               <span class="link_name">Posts</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Posts</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="./galeries.html">
+               <i class='bx bx-collection' ></i>
+               <span class="link_name">Galeries</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Galeries</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="profile-details">
+            <div class="profile-content">
+               <img src="/assets/img/copy_197618216.png" alt="profileImg">
+            </div>
+            <div class="name-job">
+               <div class="profile_name">Sami Fourati</div>
+               <div class="job">Lili Land</div>
+            </div>
+            <i class='bx bx-log-out' ><a id="logout" data-title="logout"></a></i>
+         </div>
+      </li>
+   </ul>
+</div>
+<section class="home-section">
+   <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Galeries</span>
+   </div>
+</section>
+<script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--   <head>-->
+<!--      <meta charset="UTF-8">-->
+<!--      <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--      <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--      <link rel="stylesheet" href="./assets/css/dashboard.css">-->
+<!--      <link rel="stylesheet" href="./assets/css/style.css">-->
+<!--      <link rel="stylesheet" href="./assets/css/menustyle.css">-->
+<!--      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--      <title>Menu</title>-->
+<!--   </head>-->
+<!--   <body>-->
+<!--      <canvas id="bgCanvas"></canvas>-->
+<!--      <span class="bckg"></span>-->
+<!--      <header class="header">-->
+<!--         <br><br>-->
+<!--         <h1>Dashboard</h1>-->
+<!--         <nav>-->
+<!--            <ul class="ul">-->
+<!--               <li class="li">-->
+<!--                  <a class="a" href="home.html" data-title="Profile">Profile</a>-->
+<!--               </li>-->
+<!--               <li class="li">-->
+<!--                  <a class="a" href="posts.html" data-title="Crud">Crud</a>-->
+<!--               </li>-->
+
+<!--               <li class="li">-->
+<!--                  <a class="a" href="./galeries.html" data-title="Menu">Menu</a>-->
+<!--               </li>-->
+<!--               <li class="li">-->
+<!--                  <a class="a"  href="./newsletter.html" data-title="Newsletter">Newsletter</a>-->
+<!--               </li>-->
+<!--               <li class="li">-->
+<!--                  <a class="a" href="#" id="logout" data-title="logout">Logout</a>-->
+<!--               </li>-->
+<!--            </ul>-->
+<!--         </nav>-->
+<!--      </header>-->
+<!--      <main class="main">-->
+<!--        <div class="title">-->
+<!--            <h2 class="h2">Restaurant Name</h2>-->
+<!--            <a class="a2" href="javascript:void(0);" id="namedisplay" method="get" action="/namedisplay"></a>             -->
+<!--            <button id="cart-button">🛒 Voir le panier</button>-->
+<!--        </div>-->
+<!--        <div class="shopping-cart">-->
+<!--            <h2>Panier</h2>-->
+<!--            <div class="cart-items"></div>-->
+<!--            <p>Total: <span id="total-price">0</span>DT</p>-->
+<!--            <button id="checkout">Valider la commande</button>-->
+<!--            <button id="close-cart">Fermer le panier</button>-->
+<!--        </div>-->
+<!--         <article class="larg">-->
+<!--            <center>-->
+<!--               <div id="add-menu-item-form" style="display:flex">-->
+<!--                  <div class="form">-->
+<!--                     <h1 id="error-message"></h1>-->
+<!--                     <div class="tab-content">-->
+<!--                        <h1>Ajouter un plat</h1>-->
+<!--                     </div>-->
+<!--                     <form id="addMenuItemForm">-->
+<!--                        <div class="field-wrap">-->
+<!--                           <label for="name">-->
+<!--                           Nom du plat<span class="req">*</span>-->
+<!--                           </label>-->
+<!--                           <input type="text" name="name" id="name" required autocomplete="off" />-->
+<!--                        </div>-->
+<!--                        <div class="field-wrap">-->
+<!--                           <label for="price">-->
+<!--                           Prix<span class="req">*</span>-->
+<!--                           </label>-->
+<!--                           <input type="number" name="price" id="price" step="0.001" required autocomplete="off" />-->
+<!--                        </div>-->
+<!--                        <div class="field-wrap">-->
+<!--                           <label for="description">-->
+<!--                           Description<span class="req">*</span>-->
+<!--                           </label>-->
+<!--                           <input type="text" name="description" id="description" required autocomplete="off" />-->
+<!--                        </div>-->
+<!--                        <div class="field-wrap">-->
+<!--                           <label for="image">-->
+<!--                           </label>-->
+<!--                           <input type="file" name="image"  id="image" required />-->
+<!--                        </div>-->
+<!--                        <button class="button button-block"/>Ajouter</button>-->
+<!--                     </form>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div id="order-access" class="orders-container">-->
+<!--                  <h2>Commandes en cours</h2>-->
+<!--                  <ul class="orders-list" id="orders-in-progress">-->
+<!--                      &lt;!&ndash; Les commandes en cours seront ajoutées ici via JavaScript &ndash;&gt;-->
+<!--                  </ul>-->
+<!--                  <h2>Commandes archivées</h2>-->
+<!--                  <ul class="orders-list" id="orders-archived">-->
+<!--                      &lt;!&ndash; Les commandes archivées seront ajoutées ici via JavaScript &ndash;&gt;-->
+<!--                  </ul>-->
+<!--              </div>-->
+<!--               <section class="section bd-container" id="menu">-->
+<!--                  <div class="menu__container bd-grid">-->
+<!--                     <div id="menu-list">-->
+<!--                        &lt;!&ndash; Les plats du menu seront affichés ici &ndash;&gt;-->
+<!--                     </div>-->
+<!--                     <br><br><br><br><br><br><br>-->
+<!--                  </div>-->
+<!--               </section>-->
+<!--            </center>-->
+<!--         </article>-->
+<!--      </main>-->
+<!--      <script src="assets/js/logout.js"></script>-->
+<!--      <script src="assets/js/menu.js"></script>-->
+<!--      <script src="assets/js/dashboard.js"></script>-->
+<!--      <script src="assets/js/background_and_form.js"></script>-->
+<!--   </body>-->
+<!--</html>-->

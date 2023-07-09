@@ -1,0 +1,45 @@
+/* Style pour centrer le texte dans les cellules du tableau */
+#userTable th,
+#userTable td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Styles pour rendre le tableau responsive */
+#userTable {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+/* Styles pour les lignes et les colonnes */
+#userTable th,
+#userTable td {
+	border: 1px solid #ccc;
+	padding: 8px 16px;
+}
+
+/* Style pour le bouton "Edit" */
+button.edit {
+	background-color: transparent;
+	border: none;
+	font-size: 36px;
+	color: coral;
+	cursor: pointer;
+}
+
+/* Style pour le bouton "Delete" */
+button.delete {
+	background-color: transparent;
+	border: none;
+	font-size: 36px;
+	color: crimson;
+	cursor: pointer;
+}
+
+/* Style pour rendre le fond du tableau transparent */
+#userTable {
+	background-color: transparent;
+}

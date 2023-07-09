@@ -1,0 +1,144 @@
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <title>Lili Land Admin | Posts</title>
+   <link rel="stylesheet" href="./assets/css/dashboard.css">
+   <link rel="stylesheet" href="./assets/css/posts.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Boxiocns CDN Link -->
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar close">
+   <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Lili Land</span>
+   </div>
+   <ul class="nav-links">
+      <li>
+         <div class="iocn-link">
+            <a href="./home.html">
+               <i class='bx bx-grid-alt' ></i>
+               <span class="link_name">Dashboard</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Dashboard</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="./newsletter.html">
+               <i class='bx bx-envelope' ></i>
+               <span class="link_name">Newsletter</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Newsletter</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="posts.html">
+               <i class='bx bx-book-alt' ></i>
+               <span class="link_name">Posts</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Posts</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="iocn-link">
+            <a href="./galeries.html">
+               <i class='bx bx-collection' ></i>
+               <span class="link_name">Galeries</span>
+            </a>
+            <ul class="sub-menu blank">
+               <li><a class="link_name" href="#">Galeries</a></li>
+            </ul>
+         </div>
+      </li>
+      <li>
+         <div class="profile-details">
+            <div class="profile-content">
+               <img src="/assets/img/copy_197618216.png" alt="profileImg">
+            </div>
+            <div class="name-job">
+               <div class="profile_name">Sami Fourati</div>
+               <div class="job">Lili Land</div>
+            </div>
+            <i class='bx bx-log-out' ><a id="logout" data-title="logout"></a></i>
+         </div>
+      </li>
+   </ul>
+</div>
+<section class="home-section">
+   <div class="home-content">
+      <a onclick="dashboard-effect()">
+         <i class='bx bx-menu'></i>
+         <span class="text">Posts</span>
+      </a>
+      <section class="posts">
+         <div class="button-post">
+            <i class='bx bxs-envelope'></i>
+            <button onclick="hireBtn()" >Ajouter un post</button>
+         </div>
+         <div class="posts-popup-outer">
+            <div class="posts-popup-box">
+               <i class='bx bx-x posts-close' onclick="closeSection()"></i>
+               <div class="posts-profile-text">
+                  <div class="text">
+                     <span class="posts-name">Sami Fourati</span>
+                     <span class="posts-profession">Lili Land</span>
+                  </div>
+               </div>
+               <input type="text" placeholder="Titre">
+               <textarea placeholder="Enter your message"></textarea>
+               <input type="file" accept="image/*">
+               <div class="posts-button">
+                  <button class="posts-cancel" onclick="closeSection()">Cancel</button>
+                  <button class="posts-send">Send</button>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</section>
+<!--<script src="assets/js/posts.js"></script>-->
+<script src="assets/js/logout.js"></script>
+<script>
+  const section = document.querySelector("section.posts");
+  const textArea = document.querySelector("textarea");
+  let sidebar = document.querySelector(".sidebar");
+
+
+
+  function hireBtn() {
+      section.classList.add("active");
+  }
+
+  function closeSection() {
+      section.classList.remove("active");
+      textArea.value = "";
+  }
+
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  function dashboard-effect() {
+       sidebar.classList.toggle("close");
+  }
+   //let menuIcon = document.querySelector(".home-content i.bx-menu");
+   //console.log(menuIcon);
+   //menuIcon.addEventListener("click", ()=>{
+   //});
+</script>
+</body>
+</html>
